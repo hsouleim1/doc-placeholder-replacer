@@ -1,30 +1,29 @@
-# Document Placeholder Replacement Script
-### This script replaces placeholders in DOCX or ODT documents with a specified string. Placeholders are defined as text enclosed between two @ characters (e.g., @placeholder@).
+# Replace Placeholders in Documents
 
-## rerequisites
-Make sure you have Python installed on your system. This script requires the following Python libraries:
+This script replaces placeholders in `.docx` and `.odt` documents. The placeholders are denoted by text between two `@` characters (e.g., `@placeholder@`). The output document will be saved with `_modified` appended to the original filename.
 
-python-docx: To handle DOCX files
-odfpy: To handle ODT files
-You can install these libraries using pip:
+## Requirements
 
-pip install python-docx odfpy
-Script Description
-The script replace_placeholders.py replaces placeholders in a document with a given string. It supports both DOCX and ODT file formats.
+- `Python 3.x`
+- `python-docx`
+- `odfpy`
 
+## Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/your-repo-name.git
+   cd your-repo-name
+2. Install the required packages:
+    ```sh
+    pip install python-docx odfpy
 ## Usage
-The script is designed to be run from the command line with the following arguments:
-
-input_string: The string to replace the placeholders.
-input_doc_path: The path to the input document (either .docx or .odt).
-output_doc_path: The path to save the output document (either .docx or .odt).
-## Command to Run
-
-python replace_placeholders.py "replacement text" input_document.docx output_document.docx
-or
-
-python replace_placeholders.py "replacement text" input_document.odt output_document.odt
+To run the script, use the following command:
+    
+    python replace_placeholders.py <input_string> <input_doc_path>
+    <input_string>: The string to replace the placeholders with.
+    <input_doc_path>: Path to the input document (either .docx or .odt).
 ## Example
 
-python replace_placeholders.py "Hello World" sample_input.docx sample_output.docx
-This command will replace all placeholders in sample_input.docx with "Hello World" and save the result to sample_output.docx.
+python replace_placeholders.py "Hello World" "input_document.docx"
+The output document will be saved as input_document_modified.docx.
